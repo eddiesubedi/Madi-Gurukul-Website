@@ -44,6 +44,46 @@
 .header-inner > .row{
     display: table;
 }
+@media (max-width: 680px) {
+    .nav-links{
+        display: none;
+    }
+}
+
+@media (min-width: 680px) {
+    .nav-mobile{
+        display: none;
+    }
+}
+.menu{
+    margin-top:10px;
+    font-size:30px;
+    cursor: pointer;
+}
+.mobile-links{
+    display: none;
+}
+.menu:hover{
+    color: red;
+}
+.mobile-links li{
+    list-style-type: none;
+}
+.mobile-links ul{
+    padding:0;
+}
+.mobile-links a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.mobile-links a:hover{
+    color: red;
+}
+.mobile-links .row{
+    padding-left:30px;
+    font-family: 'Source Code Pro', monospace;
+}
 /*-----------------------------------------------------------------*/
 
 /*HERO*/
@@ -78,18 +118,50 @@
 }
 /*-----------------------------------------------------------------*/
 
+/*MEMBERS*/
+.gallery-arrow{
+    vertical-align: top;
+    cursor: pointer;
+}
+.gallery-arrow:hover{
+    color: red;
+}
+.gal-col{
+    width:30%;
+    height:200px;
+    display: inline-block;
+    /*transition: background-image 3s ease-in-out;*/
+}
+@media (max-width: 900px){
+    .gal-col:nth-child(4){
+        display: none;
+    }
+    .gal-col{
+        width:40%;
+    }
+}
+@media(max-width: 680px){
+    .gal-col:nth-child(3){
+        display: none;
+    }
+    .gal-col{
+        width:70%;
+    }
+}
+/*-----------------------------------------------------------------*/
+
+/*MEMBERS*/
 .col-mem{
     background-color: #F7F7F7;
     height:200px;
     display: inline-block;
     overflow :hidden;
 }
-/*MEMBERS*/
 @media (min-width: 900px) {
     .col-mem{
         width:21%;
     }
-    .gal-row{
+    .mem-row{
         margin-bottom:1%;
     }
     .col-mem:nth-child(1),.col-mem:nth-child(2),.col-mem:nth-child(3){
@@ -125,6 +197,14 @@
 }
 /*-----------------------------------------------------------------*/
 
+/*FOOTER*/
+.footer{
+    background-color:#F7F7F7;
+    height:100px;
+    padding-top:15px;
+}
+/*-----------------------------------------------------------------*/
+
 /*GENERAL USE*/
 .row{
     width: 100%;
@@ -142,6 +222,7 @@
 }
 a{
     text-decoration: none;
+    color: black;
 }
 .white{
     color:white;
@@ -153,15 +234,14 @@ a{
     border:1px solid black;
 }
 .bdr-white{
-    border:1px solid white;
+    border:2px solid white;
 }
-.btn-round{
+.btn{
     font-family: 'Montserrat', sans-serif;
     padding: 15px 90px 15px 90px;
-    border-radius:50px;
     transition: border-color .4s, background-color .4s;
 }
-.btn-round:hover{
+.btn:hover{
     background-color: red;
     border-color: red;
 }
@@ -178,10 +258,18 @@ p{
     font-size: 15px;
 }
 strong{
-    color: red;
+    color: black;
 }
 .desrc{
     padding-left:15px;
     padding-right:15px;
+}
+i{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 /*-----------------------------------------------------------------*/
